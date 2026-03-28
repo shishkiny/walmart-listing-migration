@@ -4,7 +4,7 @@ import { useState, useEffect } from "react"
 import { Star, ShoppingCart, Check, Truck, Shield, RotateCcw, Heart, Share2, Sparkles, ChevronLeft, ChevronRight } from "lucide-react"
 
 interface ListingResultProps {
-  locale: "en" | "ru"
+  locale?: "en" | "ru"
 }
 
 const productFeatures = [
@@ -96,7 +96,7 @@ function StarRating({ rating, count }: { rating: number; count: number }) {
   )
 }
 
-export function ListingResult({ locale }: ListingResultProps) {
+export function ListingResult({ locale = "en" }: ListingResultProps) {
   const [active, setActive] = useState(0)
   const [isAutoPlaying, setIsAutoPlaying] = useState(true)
 
