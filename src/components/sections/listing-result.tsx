@@ -32,7 +32,7 @@ const productFeatures = [
   {
     bg: "linear-gradient(135deg, #1c1c2e 0%, #2d2d44 40%, #3d3d5c 100%)",
     emoji: "\u{1F4BB}",
-    headline: '16.3" \u00D7 10.2" \u00D7 7.3"',
+    headline: '16.3" × 10.2" × 7.3"',
     sub: 'Fits 15" Laptop',
     accent: "#94a3b8",
   },
@@ -129,17 +129,17 @@ export function ListingResult({ locale = "en" }: ListingResultProps) {
         <div className="container-wide">
           {/* Section header */}
           <div className="sec-tag up">
-            {locale === "en" ? "AI-Generated Listing" : "AI-\u0441\u0433\u0435\u043D\u0435\u0440\u0438\u0440\u043E\u0432\u0430\u043D\u043D\u044B\u0439 \u043B\u0438\u0441\u0442\u0438\u043D\u0433"}
+            {locale === "en" ? "AI-Generated Listing" : "AI-сгенерированный листинг"}
           </div>
           <h2 className="up d1 max-w-4xl">
             {locale === "en"
               ? "Your Product, Live on Walmart"
-              : "\u0412\u0430\u0448 \u043F\u0440\u043E\u0434\u0443\u043A\u0442 \u043D\u0430 Walmart"}
+              : "Ваш продукт на Walmart"}
           </h2>
           <p className="sec-sub up d2 max-w-3xl">
             {locale === "en"
-              ? "See what AI-optimized listings look like. Every image, title, and bullet point \u2014 crafted to convert on Walmart's marketplace."
-              : "\u041F\u043E\u0441\u043C\u043E\u0442\u0440\u0438\u0442\u0435, \u043A\u0430\u043A \u0432\u044B\u0433\u043B\u044F\u0434\u044F\u0442 AI-\u043E\u043F\u0442\u0438\u043C\u0438\u0437\u0438\u0440\u043E\u0432\u0430\u043D\u043D\u044B\u0435 \u043B\u0438\u0441\u0442\u0438\u043D\u0433\u0438. \u041A\u0430\u0436\u0434\u043E\u0435 \u0438\u0437\u043E\u0431\u0440\u0430\u0436\u0435\u043D\u0438\u0435, \u0437\u0430\u0433\u043E\u043B\u043E\u0432\u043E\u043A \u0438 \u0431\u0443\u043B\u043B\u0435\u0442 \u2014 \u0441\u043E\u0437\u0434\u0430\u043D\u044B \u0434\u043B\u044F \u043A\u043E\u043D\u0432\u0435\u0440\u0441\u0438\u0438 \u043D\u0430 \u043C\u0430\u0440\u043A\u0435\u0442\u043F\u043B\u0435\u0439\u0441\u0435 Walmart."}
+              ? "See what AI-optimized listings look like. Every image, title, and bullet point — crafted to convert on Walmart's marketplace."
+              : "Посмотрите, как выглядят AI-оптимизированные листинги. Каждое изображение, заголовок и буллет — созданы для конверсии на маркетплейсе Walmart."}
           </p>
 
           {/* Walmart PDP Mockup */}
@@ -234,7 +234,7 @@ export function ListingResult({ locale = "en" }: ListingResultProps) {
 
                   {/* Title */}
                   <h3 className="mt-2 text-xl sm:text-2xl font-bold text-[#2e2f32] leading-tight">
-                    The Everywhere Bag \u2014 Water-Repellent Nylon Weekender with Trolley Sleeve & Laptop Compartment
+                    The Everywhere Bag — Water-Repellent Nylon Weekender with Trolley Sleeve & Laptop Compartment
                   </h3>
 
                   {/* Rating */}
@@ -307,8 +307,8 @@ export function ListingResult({ locale = "en" }: ListingResultProps) {
                 <Sparkles size={12} className="text-accent" />
                 <span className="text-[10px] font-bold uppercase tracking-[0.25em] text-muted">
                   {locale === "en"
-                    ? "Every element \u2014 AI-optimized for Walmart"
-                    : "\u041A\u0430\u0436\u0434\u044B\u0439 \u044D\u043B\u0435\u043C\u0435\u043D\u0442 \u2014 AI-\u043E\u043F\u0442\u0438\u043C\u0438\u0437\u0438\u0440\u043E\u0432\u0430\u043D \u0434\u043B\u044F Walmart"}
+                    ? "Every element — AI-optimized for Walmart"
+                    : "Каждый элемент — AI-оптимизирован для Walmart"}
                 </span>
               </div>
               <div className="h-px w-16 bg-gradient-to-l from-transparent to-accent/30" />
