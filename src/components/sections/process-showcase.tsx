@@ -6,8 +6,8 @@ import { Logo } from "../logo";
 
 const productImages = [
   { title: "Away Everywhere Bag", desc: "Padded Laptop Sleeve, Removable Shoulder Strap", price: "$198.00", color: "#8FBC8F" },
-  { title: "Product Dimensions", desc: '16.3" Ã 10.2" Ã 7.3" â Personal Item Size', price: "Carry-On Approved", color: "#B8D4E3" },
-  { title: "Trolley Sleeve Feature", desc: "Slides onto any Away luggage â no juggling", price: "One-Hand Travel", color: "#D4C5A9" },
+  { title: "Product Dimensions", desc: '16.3" x 10.2" x 7.3" — Personal Item Size', price: "Carry-On Approved", color: "#B8D4E3" },
+  { title: "Trolley Sleeve Feature", desc: "Slides onto any Away luggage — no juggling", price: "One-Hand Travel", color: "#D4C5A9" },
   { title: "Water-Repellent Nylon", desc: "Bead-off technology, durable shell, spot-clean easy", price: "Premium Material", color: "#A8C5B8" },
 ];
 
@@ -32,7 +32,7 @@ export function ProcessShowcase() {
             <span>The Process</span>
           </div>
           <h2 className="text-text mb-4 text-balance">
-            From any marketplace â <span className="grad-blue">straight to Walmart</span>
+            From any marketplace — <span className="grad-blue">straight to Walmart</span>
           </h2>
           <p className="sec-sub mx-auto text-center">
             One URL in, a fully compliant Walmart listing out. Watch the magic happen.
