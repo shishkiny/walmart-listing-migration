@@ -49,35 +49,38 @@ const bulletPoints = [
 function FeatureImage({ feature, isActive }: { feature: typeof productFeatures[0]; isActive: boolean }) {
   return (
     <div
-      className="absolute inset-0 flex flex-col items-center justify-center p-8 transition-opacity duration-500"
+      className="absolute inset-0"
       style={{
-        background: feature.bg,
         opacity: isActive ? 1 : 0,
+        transition: "opacity 0.6s ease-in-out",
         pointerEvents: isActive ? "auto" : "none",
       }}
     >
-      {/* Decorative circles */}
-      <div className="absolute top-6 right-6 w-24 h-24 rounded-full opacity-10" style={{ background: feature.accent }} />
-      <div className="absolute bottom-10 left-8 w-16 h-16 rounded-full opacity-5" style={{ background: feature.accent }} />
-
-      <span className="text-6xl mb-5 drop-shadow-lg" role="img">{feature.emoji}</span>
-      <h3
-        className="text-center font-bold text-xl sm:text-2xl leading-tight tracking-wide text-white whitespace-pre-line"
-        style={{ textShadow: "0 2px 20px rgba(0,0,0,0.5)" }}
-      >
-        {feature.headline}
-      </h3>
-      <div className="mt-4 flex items-center gap-2">
-        <div className="w-8 h-px" style={{ background: feature.accent }} />
-        <span className="text-xs font-semibold uppercase tracking-[0.2em] opacity-80" style={{ color: feature.accent }}>
-          {feature.sub}
-        </span>
-        <div className="w-8 h-px" style={{ background: feature.accent }} />
+      <img
+        src={feature.img}
+        alt={feature.sub}
+        className="w-full h-full object-cover"
+        loading="lazy"
+      />
+      <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
+      <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
+        <h3
+          className="font-bold text-xl sm:text-2xl whitespace-pre-line leading-tight"
+          style={{ textShadow: "0 2px 20px rgba(0,0,0,0.5)" }}
+        >
+          {feature.headline}
+        </h3>
+        <div className="mt-3 flex items-center gap-2">
+          <div className="w-8 h-px" style={{ background: feature.accent }} />
+          <span className="text-xs font-semibold uppercase tracking-widest" style={{ color: feature.accent }}>
+            {feature.sub}
+          </span>
+          <div className="w-8 h-px" style={{ background: feature.accent }} />
+        </div>
       </div>
     </div>
   )
 }
-
 function StarRating({ rating, count }: { rating: number; count: number }) {
   return (
     <div className="flex items-center gap-2">
@@ -216,12 +219,7 @@ export function ListingResult({ locale = "en" }: ListingResultProps) {
                           i === active ? "border-[#0071DC] shadow-md" : "border-transparent opacity-60 hover:opacity-90"
                         }`}
                       >
-                        <div
-                          className="w-full h-full flex items-center justify-center text-2xl"
-                          style={{ background: feat.bg }}
-                        >
-                          <span role="img">{feat.emoji}</span>
-                        </div>
+                        <img src={feat.img} alt={feat.sub} className="w-full h-full object-cover" loading="lazy" />
                       </button>
                     ))}
                   </div>
