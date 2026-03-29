@@ -9,28 +9,28 @@ interface ListingResultProps {
 
 const productFeatures = [
   {
-    bg: "linear-gradient(135deg, #0a4d3a 0%, #0d6b4f 40%, #14876a 100%)",
+    img: "https://cdn.shopify.com/s/files/1/0664/7418/0792/files/abb7fe28-7a92-41f8-adeb-405528217310.jpg",
     emoji: "\u{1F9F3}",
     headline: "SLIDES ONTO YOUR\nSUITCASE",
     sub: "Trolley Sleeve",
     accent: "#4ade80",
   },
   {
-    bg: "linear-gradient(135deg, #1a365d 0%, #1e4a8a 40%, #2563eb 100%)",
+    img: "https://cdn.shopify.com/s/files/1/0664/7418/0792/files/e7f63ab8-f308-4fba-8f9c-30daf20d8849.jpg",
     emoji: "\u{1F327}\u{FE0F}",
     headline: "REPELS WATER.\nKEEPS MOVING.",
     sub: "Water-Repellent Nylon",
     accent: "#60a5fa",
   },
   {
-    bg: "linear-gradient(135deg, #44204a 0%, #6b2c76 40%, #8b3f96 100%)",
+    img: "https://cdn.shopify.com/s/files/1/0664/7418/0792/files/c8248aa3-c7d2-4c70-845f-b240a5bb94ad.jpg",
     emoji: "\u{1F4BC}",
     headline: "THE\nEVERYWHERE BAG",
     sub: "Interior Organization",
     accent: "#c084fc",
   },
   {
-    bg: "linear-gradient(135deg, #1c1c2e 0%, #2d2d44 40%, #3d3d5c 100%)",
+    img: "https://cdn.shopify.com/s/files/1/0664/7418/0792/files/b2800a62-760f-44ff-bdf8-6e5c246d51e0.jpg",
     emoji: "\u{1F4BB}",
     headline: '16.3" × 10.2" × 7.3"',
     sub: 'Fits 15" Laptop',
@@ -81,24 +81,6 @@ function FeatureImage({ feature, isActive }: { feature: typeof productFeatures[0
     </div>
   )
 }
-function StarRating({ rating, count }: { rating: number; count: number }) {
-  return (
-    <div className="flex items-center gap-2">
-      <div className="flex items-center gap-0.5">
-        {[1, 2, 3, 4, 5].map((i) => (
-          <Star
-            key={i}
-            size={14}
-            className={i <= Math.floor(rating) ? "fill-[#ffc220] text-[#ffc220]" : "text-gray-300"}
-          />
-        ))}
-      </div>
-      <span className="text-sm text-[#2e2f32] font-medium">{rating}</span>
-      <span className="text-sm text-[#6d6e71]">({count.toLocaleString()} reviews)</span>
-    </div>
-  )
-}
-
 export function ListingResult({ locale = "en" }: ListingResultProps) {
   const [active, setActive] = useState(0)
   const [isAutoPlaying, setIsAutoPlaying] = useState(true)
