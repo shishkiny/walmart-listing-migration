@@ -81,6 +81,25 @@ function FeatureImage({ feature, isActive }: { feature: typeof productFeatures[0
     </div>
   )
 }
+
+function StarRating({ rating, count }: { rating: number; count: number }) {
+  return (
+    <div className="flex items-center gap-2">
+      <div className="flex items-center gap-0.5">
+        {[1, 2, 3, 4, 5].map((i) => (
+          <Star
+            key={i}
+            size={14}
+            className={i <= Math.floor(rating) ? "fill-[#ffc220] text-[#ffc220]" : "text-gray-300"}
+          />
+        ))}
+      </div>
+      <span className="text-sm text-[#2e2f32] font-medium">{rating}</span>
+      <span className="text-sm text-[#6d6e71]">{count.toLocaleString()} reviews</span>
+    </div>
+  )
+}
+
 export function ListingResult({ locale = "en" }: ListingResultProps) {
   const [active, setActive] = useState(0)
   const [isAutoPlaying, setIsAutoPlaying] = useState(true)
